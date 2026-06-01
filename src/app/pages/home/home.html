@@ -1,0 +1,29 @@
+<section id="home" class="homeHero pageSection">
+  <div class="heroContent">
+    <h1 class="heroTitle">Ayushree Mishra</h1>
+    <p class="heroTagline">Crafting Digital Experiences</p>
+    <p class="heroDescription">I build accessible, performant, and beautiful web experiences.</p>
+
+    <div class="heroActions">
+      <a class="actionButton primaryAction" [routerLink]="['/']" fragment="experience">
+        <span>View My Work</span>
+        <span class="buttonIcon iconDown">
+          <icon name="arrow_up" [size]="16" />
+        </span>
+      </a>
+
+      <a class="actionButton secondaryAction" [routerLink]="['/']" fragment="contact">
+        <span>Get in Touch</span>
+        <span class="buttonIcon">
+          <icon name="arrow_up" [size]="16" />
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<app-work class="pageSection"></app-work>
+<app-education class="pageSection"></app-education>
+<app-achievements class="pageSection"></app-achievements>
+<app-projects class="pageSection"></app-projects>
+<app-contact class="pageSection"></app-contact>

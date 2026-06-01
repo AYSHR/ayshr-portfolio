@@ -1,0 +1,34 @@
+<section id="experience" class="experiencePage contentSection">
+  <header class="experienceIntro">
+    <p class="workedLabel">EXPERIENCE</p>
+    <h1 class="experienceTitle">Where I've <span class="workedAccent">worked</span></h1>
+  </header>
+
+  <div class="experienceList">
+    @for (experience of experiences; track experience.companyName) {
+      <article class="experienceCard">
+        <div class="experienceMeta">
+          <div class="companyRow">
+            <h2 class="companyName">{{ experience.companyName }}</h2>
+            <p class="periodText">{{ experience.period }}</p>
+          </div>
+          <p class="roleText">{{ experience.role }}</p>
+        </div>
+
+        <div class="experienceBody">
+          <ul class="highlightsList">
+            @for (point of experience.highlights; track point) {
+              <li class="highlightItem">{{ point }}</li>
+            }
+          </ul>
+
+          <div class="skillsRow">
+            @for (skill of experience.skills; track skill) {
+              <span class="skillChip">{{ skill }}</span>
+            }
+          </div>
+        </div>
+      </article>
+    }
+  </div>
+</section>

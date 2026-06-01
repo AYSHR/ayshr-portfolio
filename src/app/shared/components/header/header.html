@@ -1,0 +1,33 @@
+<header class="headerContainer">
+  <a class="brandBlock" routerLink="/" fragment="home" (click)="closeMobileMenu()">
+    <span class="brandMonogram">AM</span>
+    <span class="brandName">Ayushree Mishra</span>
+  </a>
+
+  <nav class="desktopNav">
+    @for (link of navLinks; track link.fragment) {
+      <a class="navLink" [routerLink]="['/']" [fragment]="link.fragment">{{ link.label }}</a>
+    }
+  </nav>
+
+  <div class="actionGroup">
+    <button
+      class="iconButton mobileToggle"
+      type="button"
+      [attr.aria-expanded]="mobileMenuOpen()"
+      aria-label="Toggle menu"
+      (click)="toggleMobileMenu()">
+      <icon [name]="'hamburger'" [size]="20" />
+    </button>
+  </div>
+</header>
+
+@if (mobileMenuOpen()) {
+  <nav class="mobilePanel">
+    @for (link of navLinks; track link.fragment) {
+      <a class="mobileNavLink" [routerLink]="['/']" [fragment]="link.fragment" (click)="closeMobileMenu()">
+        {{ link.label }}
+      </a>
+    }
+  </nav>
+}

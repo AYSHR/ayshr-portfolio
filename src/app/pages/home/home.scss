@@ -1,0 +1,119 @@
+@use '../../shared/styles/tokens' as *;
+
+:host {
+  display: block;
+}
+
+.homeHero {
+  align-items: center;
+  background: radial-gradient(circle at 20% 0%, rgba(98, 72, 46, 0.2), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(98, 72, 46, 0.15), transparent 45%),
+    $background-secondary;
+  color: $text-primary;
+  display: flex;
+  justify-content: center;
+  min-height: calc(100dvh - 4.5rem);
+  padding: 2.5rem 1.5rem;
+}
+
+.heroContent {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 48rem;
+  text-align: center;
+}
+
+.heroTitle {
+  color: $text-heading;
+  font-size: clamp(2.75rem, 8vw, 5.5rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.heroTagline {
+  color: $text-accent;
+  font-size: 36px;
+  font-style: italic;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.heroDescription {
+  color: $text-accent;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding-bottom: 32px;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.actionButton {
+  align-items: center;
+  border: 1px solid $button-border;
+  border-radius: 999px;
+  color: $text-light;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 500;
+  gap: 0.5rem;
+  line-height: 1;
+  min-height: 3.25rem;
+  padding: 4px 32px;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.primaryAction {
+  background: $button-active-background;
+  border-color: $button-active-border;
+  color: $button-active-foreground;
+}
+
+.actionButton:hover {
+  border-color: $button-border-hover;
+}
+
+.routeActive {
+  background: $button-active-background;
+  border-color: $button-active-border;
+  color: $button-active-foreground;
+}
+
+.buttonIcon {
+  display: inline-flex;
+  height: 16px;
+  width: 16px;
+}
+
+.iconDown {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .homeHero {
+    min-height: calc(100dvh - 4rem);
+  }
+
+  .heroTagline {
+    font-size: 30px;
+  }
+
+  .heroActions {
+    width: 100%;
+  }
+
+  .actionButton {
+    justify-content: center;
+    width: 100%;
+  }
+}

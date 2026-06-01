@@ -1,0 +1,122 @@
+@use '../../shared/styles/tokens' as *;
+
+:host {
+  display: block;
+}
+
+.experiencePage {
+  background: $section-background;
+  color: $experience-text;
+}
+
+.experienceIntro {
+  border-bottom: 1px solid $experience-section-border;
+  padding: 3.5rem 2rem;
+}
+
+.workedLabel {
+  color: $experience-accent;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  margin: 0;
+}
+
+.experienceTitle {
+  color: $experience-text;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+  margin: 1.25rem 0 0;
+}
+
+.workedAccent {
+  color: $experience-accent;
+  font-style: italic;
+}
+
+.experienceCard {
+  border-bottom: 1px solid $experience-section-border;
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: minmax(220px, 0.9fr) minmax(0, 1.4fr);
+  padding: 3rem 2rem;
+}
+
+.companyRow {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.companyName {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.periodText {
+  color: $experience-accent;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.roleText {
+  color: $experience-accent;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.65rem 0 0;
+}
+
+.highlightsList {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.highlightItem {
+  color: $experience-text;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  margin-bottom: 0.55rem;
+}
+
+.highlightItem:last-child {
+  margin-bottom: 0;
+}
+
+.skillsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.skillChip {
+  background: $experience-chip-background;
+  border: 1px solid $experience-chip-background;
+  border-bottom-color: $experience-chip-border-bottom;
+  border-radius: 999px;
+  color: $experience-text;
+  font-size: 0.88rem;
+  line-height: 1;
+  padding: 0.45rem 0.85rem;
+}
+
+@media (max-width: 860px) {
+  .experienceIntro,
+  .experienceCard {
+    padding: 2.5rem 1.2rem;
+  }
+
+  .experienceCard {
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  .companyName {
+    font-size: 1.7rem;
+  }
+}

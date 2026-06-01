@@ -1,0 +1,121 @@
+@use '../../styles/tokens' as *;
+
+:host {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.headerContainer {
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: $section-background;
+  border: 1px solid $section-border-color;
+  color: $text-accent;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.brandBlock {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.brandMonogram {
+  align-items: center;
+  color: $text-accent;
+  background: $background-secondary;
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 0.95rem;
+  height: 2.5rem;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  width: 2.5rem;
+}
+
+.brandName {
+  color: $text-accent;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.desktopNav {
+  display: inline-flex;
+  gap: 2rem;
+}
+
+.navLink {
+  color: $text-accent;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navLink:hover,
+.mobileNavLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.actionGroup {
+  color: $text-muted;
+  align-items: center;
+  display: inline-flex;
+  gap: 0.75rem;
+}
+
+.iconButton {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  display: inline-flex;
+  height: 2.5rem;
+  justify-content: center;
+  width: 2.5rem;
+}
+
+.iconButton:hover {
+  background: $background-tertiary;
+}
+
+.mobileToggle,
+.mobilePanel {
+  display: none;
+  color: $text-accent;
+}
+
+@media (max-width: 860px) {
+  .brandName,
+  .desktopNav {
+    display: none;
+  }
+
+  .mobileToggle {
+    display: inline-flex;
+  }
+
+  .mobilePanel {
+    z-index: 1;
+    background: $section-background;
+    border-bottom: 1px solid $section-border-color;
+    color: $text-accent;
+    display: grid;
+    gap: 0.5rem;
+    padding: 1.25rem 1.5rem 1.5rem;
+  }
+
+  .mobileNavLink {
+    color: $text-accent;
+    font-size: 1rem;
+    padding: 0.35rem 0;
+    text-decoration: none;
+  }
+}
