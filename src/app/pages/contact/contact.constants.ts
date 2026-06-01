@@ -10,22 +10,22 @@ export const CONTACT_LINKS: ContactLink[] = [
   {
     label: 'LinkedIn',
     url: 'https://linkedin.com/in/ayushree-mishra-ayshr',
-    icon: 'star',
+    icon: 'linkedin',
   },
   {
     label: 'GitHub',
     url: 'https://github.com/AYSHR',
-    icon: 'book',
+    icon: 'github',
   },
   {
     label: 'Medium',
-    url: 'https://medium.com/@ayushreemishra',
-    icon: 'palette',
+    url: 'https://medium.com/@AYSHR_M',
+    icon: 'medium',
   },
   {
     label: 'Email',
-    url: 'mailto:hello@ayushreemishra.com',
-    icon: 'badge',
+    url: 'mailto:missamishra@gmail.com',
+    icon: 'mail',
   },
 ];
 
