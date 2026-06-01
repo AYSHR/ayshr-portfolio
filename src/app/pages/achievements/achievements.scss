@@ -1,0 +1,96 @@
+@use '../../shared/styles/tokens' as *;
+
+:host {
+  display: block;
+}
+
+.achievementsSection {
+  background: $section-background;
+  border-bottom: 1px solid $experience-section-border;
+  padding: 3rem 2rem;
+}
+
+.achievementsIntro {
+  margin-bottom: 2rem;
+}
+
+.achievementsLabel {
+  color: $achievements-category;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  margin: 0;
+}
+
+.achievementsTitle {
+  color: $achievements-org;
+  font-size: clamp(2.2rem, 6vw, 3.7rem);
+  font-weight: 500;
+  margin: 1rem 0 0;
+}
+
+.milestoneAccent {
+  color: $achievements-category;
+  font-style: italic;
+}
+
+.achievementsGrid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.achievementCard {
+  background: $education-card-bg-2;
+  border: 1px solid $section-border-color;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.achievementTopRow {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.achievementIconWrap {
+  align-items: center;
+  background: $education-card-bg-1;
+  border-radius: 999px;
+  color: $achievements-category;
+  display: inline-flex;
+  height: 2.4rem;
+  justify-content: center;
+  width: 2.4rem;
+}
+
+.achievementYear {
+  color: $education-year;
+  font-size: 14px;
+  margin: 0;
+}
+
+.achievementOrg {
+  color: $achievements-org;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.achievementDesc {
+  color: $achievements-description;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.achievementCategory {
+  color: $achievements-category;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  margin-top: auto;
+  text-transform: uppercase;
+}

@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { Icon } from '../../shared/components/icon/icon';
+import { EDUCATION_ITEMS } from './education.constants';
 
 @Component({
   selector: 'app-education',
-  imports: [],
+  imports: [Icon],
   templateUrl: './education.html',
   styleUrl: './education.scss',
+  encapsulation: ViewEncapsulation.None
 })
-export class Education {}
+export class Education {
+  protected readonly educationItems = EDUCATION_ITEMS;
+}

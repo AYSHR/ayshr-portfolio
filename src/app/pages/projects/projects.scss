@@ -1,0 +1,156 @@
+@use '../../shared/styles/tokens' as *;
+
+:host {
+  display: block;
+}
+
+.projectsSection {
+  background: $section-background;
+  border-bottom: 1px solid $experience-section-border;
+  padding: 3rem 2rem;
+}
+
+.projectsIntro {
+  margin-bottom: 2rem;
+}
+
+.projectsLabel {
+  color: $projects-accent;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  margin: 0;
+}
+
+.projectsTitle {
+  color: $projects-heading;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0.9rem 0 0;
+}
+
+.projectsAccent {
+  color: $projects-accent;
+  font-style: italic;
+}
+
+.projectsFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 1.8rem;
+}
+
+.filterChip {
+  background: transparent;
+  border: 1px solid $projects-chip-border;
+  border-radius: 999px;
+  color: $projects-text;
+  cursor: pointer;
+  font-size: 0.95rem;
+  line-height: 1;
+  padding: 0.7rem 1.2rem;
+}
+
+.filterChip.activeChip {
+  background: $projects-chip-active-bg;
+  color: $projects-chip-active-text;
+}
+
+.projectsGrid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.projectCard {
+  border: 1px solid $projects-card-border;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.projectVisual {
+  align-items: center;
+  background: $education-card-bg-1;
+  display: flex;
+  justify-content: center;
+  min-height: 210px;
+  position: relative;
+}
+
+.projectCard:nth-child(even) .projectVisual {
+  background: $education-card-bg-2;
+}
+
+.projectBadge {
+  background: $section-background;
+  border-radius: 999px;
+  color: $projects-accent;
+  font-size: 0.9rem;
+  padding: 0.35rem 0.8rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.projectIconWrap {
+  align-items: center;
+  border: 2px solid $projects-accent;
+  border-radius: 999px;
+  color: $projects-accent;
+  display: inline-flex;
+  height: 3.8rem;
+  justify-content: center;
+  width: 3.8rem;
+}
+
+.projectContent {
+  background: $section-background;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1.5rem;
+}
+
+.projectTitle {
+  color: $projects-heading;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.projectDescription {
+  color: $projects-text;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.projectLink {
+  color: $projects-accent;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.projectTag {
+  background: $education-card-bg-2;
+  border-radius: 999px;
+  color: $projects-text;
+  font-size: 0.9rem;
+  line-height: 1;
+  padding: 0.4rem 0.75rem;
+}
+
+@media (max-width: 860px) {
+  .projectsSection {
+    padding: 2.5rem 1.2rem;
+  }
+}

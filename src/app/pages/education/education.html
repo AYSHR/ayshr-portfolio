@@ -1,3 +1,27 @@
-<section id="education" class="contentSection">
-  <p>education works!</p>
+<section id="education" class="educationSection">
+  <header class="educationIntro">
+    <p class="educationLabel">EDUCATION</p>
+    <h1 class="educationTitle">Academic <span class="journeyAccent">journey</span></h1>
+  </header>
+
+  <div class="educationGrid">
+    @for (item of educationItems; track item.degree; let idx = $index) {
+      <article class="educationCard" [class.cardAlt]="idx % 2 !== 0">
+        <div class="cardHeader">
+          <div class="cardIconWrap">
+            <icon [name]="item.icon" [size]="22" />
+          </div>
+          <p class="cardDegree">{{ item.degree }}</p>
+        </div>
+        <p class="cardYear">{{ item.period }}</p>
+        <h2 class="cardInstitution">{{ item.institution }}</h2>
+        @if (item.grade) {
+          <p class="cardGrade">{{ item.grade }}</p>
+        }
+        @if (item.description) {
+          <p class="cardDescription">{{ item.description }}</p>
+        }
+      </article>
+    }
+  </div>
 </section>
