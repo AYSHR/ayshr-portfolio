@@ -5,8 +5,8 @@ export type ProjectCategory =
   | 'Library'
   | 'Tool'
   | 'Client Work'
-  | 'Side Project'
-  | 'Experiment';
+  | 'Project'
+  | 'Article';
 
 export type ProjectFilter = 'All' | ProjectCategory;
 
@@ -16,66 +16,42 @@ export type ProjectItem = {
   category: ProjectCategory;
   tags: string[];
   icon: IconName;
+  link?: string;
 };
 
 export const PROJECT_FILTERS: ProjectFilter[] = [
   'All',
-  'Open Source',
-  'Library',
-  'Tool',
-  'Client Work',
-  'Side Project',
-  'Experiment',
+  'Project',
+  'Article',
 ];
 
 export const PROJECTS: ProjectItem[] = [
   {
-    title: 'Design System - Aurora UI',
+    title: 'Rendering Strategies in Angular',
     description:
-      'A comprehensive component library with built-in accessibility, theming, and documentation.',
-    category: 'Open Source',
-    tags: ['React', 'TypeScript', 'Storybook', 'Radix UI'],
+      'A comprehensive documentation explaining different rendering strategies in Angular.',
+    category: 'Article',
+    link: 'https://medium.com/@AYSHR_M/modern-rendering-strategies-in-angular-from-csr-to-hybrid-29baa8fe652c',
+    tags: ['Angular', 'SSR', 'CSR', 'Hydration', 'SSG'],
     icon: 'badge',
   },
   {
-    title: 'Motion - Animation Toolkit',
+    title: 'Voyage-vault',
     description:
-      'A lightweight animation library for React that helps build smooth and sequenced transitions.',
-    category: 'Library',
-    tags: ['TypeScript', 'Web Animations API', 'React'],
+      'An AI assistant travel itenerary planner which gives you an easy travel guide based on preference.',
+    category: 'Project',
+    link: 'https://github.com/AYSHR/voyage-vault',
+    tags: ['Angular', 'TypeScript', 'SCSS', 'Gemini 2.5 Flash Lite model', 'Google Maps API', 'Node.js'],
     icon: 'book',
   },
   {
-    title: 'AccessLint - WCAG Checker',
+    title: 'Relief-mate',
+    link: 'https://github.com/AYSHR/relief-mate',
     description:
-      'Automated accessibility checks for CI/CD pipelines with focused WCAG reporting.',
-    category: 'Tool',
-    tags: ['Node.js', 'Puppeteer', 'Axe-core', 'React'],
+      'A SPA and PWA angular application, which provides an option to inform any emergency on the app and the Volunteer can access to help.',
+    category: 'Project',
+    tags: ['Angular', 'Typescript', 'SCSS', 'Node.js', 'PWA', 'SPA', 'Authentication', 'Mapbox'],
     icon: 'star',
-  },
-  {
-    title: 'Campus Portal Revamp',
-    description:
-      'Delivered an end-to-end portal redesign for a university client with modular architecture.',
-    category: 'Client Work',
-    tags: ['Angular', 'RxJS', 'SCSS'],
-    icon: 'palette',
-  },
-  {
-    title: 'Portfolio CMS',
-    description:
-      'Built a side project CMS to manage personal projects, blogs, and media with markdown support.',
-    category: 'Side Project',
-    tags: ['Angular', 'Node.js', 'PostgreSQL'],
-    icon: 'badge',
-  },
-  {
-    title: 'Interaction Sandbox',
-    description:
-      'An experimental playground to test motion patterns and micro-interactions for UI components.',
-    category: 'Experiment',
-    tags: ['Framer Motion', 'TypeScript'],
-    icon: 'palette',
-  },
+  }
 ];
 
