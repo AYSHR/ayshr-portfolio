@@ -1,3 +1,23 @@
-<section id="achievements" class="contentSection">
-  <p>achievements works!</p>
+<section id="achievements" class="achievementsSection">
+  <header class="achievementsIntro">
+    <p class="achievementsLabel">RECOGNITION</p>
+    <h1 class="achievementsTitle">Achievements &amp; <span class="milestoneAccent">milestones</span></h1>
+  </header>
+
+  <div class="achievementsGrid">
+    @for (item of achievements; track item.organization) {
+      <article class="achievementCard">
+        <div class="achievementTopRow">
+          <span class="achievementIconWrap">
+            <icon [name]="item.icon" [size]="18" />
+          </span>
+          <p class="achievementYear">{{ item.year }}</p>
+        </div>
+
+        <h2 class="achievementOrg">{{ item.organization }}</h2>
+        <p class="achievementDesc">{{ item.description }}</p>
+        <p class="achievementCategory">{{ item.category }}</p>
+      </article>
+    }
+  </div>
 </section>

@@ -99,6 +99,12 @@
   transform: rotate(180deg);
 }
 
+.pageSection {
+  section {
+    padding: 50px;
+  }
+}
+
 @media (max-width: 768px) {
   .homeHero {
     min-height: calc(100dvh - 4rem);

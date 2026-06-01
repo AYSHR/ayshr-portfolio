@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Icon } from '../../shared/components/icon/icon';
 import { Achievements } from '../achievements/achievements';
@@ -12,5 +12,6 @@ import { Experience } from '../work/experience';
   imports: [ RouterLink, Icon, Experience, Education, Achievements, Projects, Contact ],
   templateUrl: './home.html',
   styleUrl: './home.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class Home {}

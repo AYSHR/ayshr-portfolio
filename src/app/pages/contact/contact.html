@@ -1,3 +1,25 @@
-<section id="contact" class="contentSection">
-  <p>contact works!</p>
+<section id="contact" class="contactSection">
+  <div class="contactContent">
+    <p class="contactLabel">LET'S CONNECT</p>
+    <h1 class="contactTitle">
+      Let's build something <span class="contactAccent">great</span> together
+    </h1>
+    <p class="contactDescription">
+      I'm always open to interesting conversations about frontend engineering, design systems, accessibility, and creative coding.
+    </p>
+
+    <div class="contactLinks">
+      @for (link of contactLinks; track link.label) {
+        <a
+          [href]="link.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contactLink"
+        >
+          <icon [name]="link.icon" [size]="18" />
+          <span>{{ link.label }}</span>
+        </a>
+      }
+    </div>
+  </div>
 </section>

@@ -1,3 +1,43 @@
-<section id="projects" class="contentSection">
-  <p>projects works!</p>
+<section id="projects" class="projectsSection">
+  <header class="projectsIntro">
+    <p class="projectsLabel">PROJECTS</p>
+    <h1 class="projectsTitle">Selected <span class="projectsAccent">work</span></h1>
+  </header>
+
+  <div class="projectsFilters">
+    @for (filter of filters; track filter) {
+      <button
+        class="filterChip"
+        [class.activeChip]="selectedCategory() === filter"
+        type="button"
+        (click)="setCategory(filter)">
+        {{ filter }}
+      </button>
+    }
+  </div>
+
+  <div class="projectsGrid">
+    @for (project of filteredProjects(); track project.title) {
+      <article class="projectCard">
+        <div class="projectVisual">
+          <span class="projectBadge">{{ project.category }}</span>
+          <span class="projectIconWrap">
+            <icon [name]="project.icon" [size]="22" />
+          </span>
+        </div>
+
+        <div class="projectContent">
+          <h2 class="projectTitle">{{ project.title }}</h2>
+          <p class="projectDescription">{{ project.description }}</p>
+          <p class="projectLink">Read more</p>
+
+          <div class="projectTags">
+            @for (tag of project.tags; track tag) {
+              <span class="projectTag">{{ tag }}</span>
+            }
+          </div>
+        </div>
+      </article>
+    }
+  </div>
 </section>
