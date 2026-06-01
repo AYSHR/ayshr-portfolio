@@ -120,6 +120,16 @@
   margin: 0;
 }
 
+.projectTitleLink {
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.projectTitleLink:hover {
+  color: $projects-accent;
+}
+
 .projectDescription {
   color: $projects-text;
   font-size: 1.05rem;
@@ -132,6 +142,11 @@
   font-size: 0.95rem;
   font-weight: 600;
   margin: 0;
+  text-decoration: none;
+}
+
+.projectLinkDisabled {
+  opacity: 0.35;
 }
 
 .projectTags {

@@ -27,7 +27,11 @@
         </div>
 
         <div class="projectContent">
-          <h2 class="projectTitle">{{ project.title }}</h2>
+          @if (project.link) {
+            <a [href]="project.link" target="_blank" rel="noopener noreferrer" class="projectTitle projectTitleLink">{{ project.title }}</a>
+          } @else {
+            <h2 class="projectTitle">{{ project.title }}</h2>
+          }
           <p class="projectDescription">{{ project.description }}</p>
           <p class="projectLink">Read more</p>
 
