@@ -10,12 +10,7 @@
 
     <div class="contactLinks">
       @for (link of contactLinks; track link.label) {
-        <a
-          [href]="link.url"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="contactLink"
-        >
+        <a [href]="link.url" target="_blank" rel="noopener noreferrer" class="contactLink">
           <icon [name]="link.icon" [size]="18" />
           <span>{{ link.label }}</span>
         </a>
