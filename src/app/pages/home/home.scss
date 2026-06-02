@@ -65,7 +65,6 @@
   display: inline-flex;
   font-size: 14px;
   font-weight: 500;
-  gap: 0.5rem;
   line-height: 1;
   min-height: 3.25rem;
   padding: 4px 32px;
@@ -89,15 +88,6 @@
   color: $button-active-foreground;
 }
 
-.buttonIcon {
-  display: inline-flex;
-  height: 16px;
-  width: 16px;
-}
-
-.iconDown {
-  transform: rotate(180deg);
-}
 
 .pageSection {
   section {
@@ -115,11 +105,10 @@
   }
 
   .heroActions {
-    width: 100%;
+    gap: 16px;
   }
 
   .actionButton {
     justify-content: center;
-    width: 100%;
   }
 }

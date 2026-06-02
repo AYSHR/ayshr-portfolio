@@ -51,16 +51,25 @@
 }
 
 .navLink {
+  border-radius: 999px;
   color: $text-accent;
   font-size: 1rem;
   font-weight: 500;
+  padding: 0.35rem 0.65rem;
   text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .navLink:hover,
-.mobileNavLink:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.2rem;
+.navLink:focus-visible,
+.mobileNavLink:hover,
+.mobileNavLink:focus-visible {
+  background: $background-tertiary;
+  color: $background-secondary;
+  text-decoration: none;
 }
 
 .actionGroup {
@@ -113,9 +122,13 @@
   }
 
   .mobileNavLink {
+    border-radius: 0.5rem;
     color: $text-accent;
     font-size: 1rem;
-    padding: 0.35rem 0;
+    padding: 0.45rem 0.6rem;
     text-decoration: none;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
   }
 }

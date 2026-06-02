@@ -4,7 +4,7 @@ export type HeaderNavLink = {
 };
 
 export const NAV_LINKS: HeaderNavLink[] = [
-  { label: 'Work', fragment: 'experience' },
+  { label: 'Experience', fragment: 'experience' },
   { label: 'Education', fragment: 'education' },
   { label: 'Achievements', fragment: 'achievements' },
   { label: 'Projects', fragment: 'projects' },

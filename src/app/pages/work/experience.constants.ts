@@ -12,7 +12,7 @@ export const EXPERIENCES: ExperienceItem[] = [
     period: '04/2025 - Present',
     role: 'Associate UI Developer (Permanent)',
     highlights: [
-      `Performance & Security Architecture: Engineered deep code optimizations and modernized legacy codebases,
+      `Engineered deep code optimizations and modernized legacy codebases,
       implementing robust security principles like Content Security Policy (CSP) to ensure secure, high-performance applications.`,
       `Scaled Component library by providing support for Internationalization, WCAG compliance and Theming in Angular Component Library.`,
       `Actively participated in peer code reviews and led domain brainstorming sessions, driving team collaboration,

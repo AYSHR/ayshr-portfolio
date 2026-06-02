@@ -16,8 +16,8 @@ export const ACHIEVEMENTS: AchievementItem[] = [
     year: '2023',
     organization: 'Software Development, issued by mthree Academy',
     link: 'https://www.credly.com/badges/71343f19-4d94-4d76-8e6a-451f9abc4745',
-    description:
-      'The Wiley Edge Software Developer badge is for future-ready talent, selected based on a 4-step rigorous selection process, trained extensively in technical competencies relevant for the job role, as well as business and professional skills required to succeed in the job role. The Alumni have successfully completed a comprehensive training program designed by Wiley Edge, based on the Wiley Edge Academy\'s global learning model for preparing the next generation of Tech talent.',
+    description: 'Awarded with the badge after passing a rigorous 4-step selection and completing intensive technical, business, and professional training.\n' +
+      'This program (Wiley Edge Academy) prepared me with job-ready skills and practical experience to excel in software roles.',
     category: 'Software Development',
     badgeImageSrc: '/images/achievements/sd-1.png',
     badgeImageAlt: 'Software Development badge from mthree Academy',
@@ -48,8 +48,7 @@ export const ACHIEVEMENTS: AchievementItem[] = [
   {
     year: '2022',
     organization: 'SAS Certified Specialist, issued by SAS',
-    description:
-      'Demonstrated the ability to use SAS Visual Analytics to analyze data and design reports that provide concise, interactive, and relevant data summaries and are skilled in such areas as adding and manipulating data items within SAS Visual Analytics, analyzing data, and designing reports using objects in SAS Visual Analytics',
+    description: 'Demonstred ability to use SAS Visual Analytics to analyze data and design concise, interactive reports, including data item manipulation and report object usage.',
     category: 'Analytics',
     link: 'https://www.credly.com/badges/887f90e1-d963-426d-87b8-a3e535193454',
     badgeImageSrc: '/images/achievements/sas-2.png',

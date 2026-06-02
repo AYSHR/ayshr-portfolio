@@ -1,6 +1,5 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Icon } from '../../shared/components/icon/icon';
 import { Achievements } from '../achievements/achievements';
 import { Contact } from '../contact/contact';
 import { Education } from '../education/education';
@@ -9,7 +8,7 @@ import { Experience } from '../work/experience';
 
 @Component({
   selector: 'home',
-  imports: [ RouterLink, Icon, Experience, Education, Achievements, Projects, Contact ],
+  imports: [ RouterLink, Experience, Education, Achievements, Projects, Contact ],
   templateUrl: './home.html',
   styleUrl: './home.scss',
   encapsulation: ViewEncapsulation.None
