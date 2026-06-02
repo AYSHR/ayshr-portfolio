@@ -6,18 +6,63 @@
 
   <div class="achievementsGrid">
     @for (item of achievements; track item.organization) {
-      <article class="achievementCard">
-        <div class="achievementTopRow">
-          <span class="achievementIconWrap">
-            <icon [name]="item.icon" [size]="18" />
-          </span>
-          <p class="achievementYear">{{ item.year }}</p>
-        </div>
+      @if (item.link) {
+        <a class="achievementCard achievementCardLink" [href]="item.link" target="_blank" rel="noopener noreferrer">
+          <div class="achievementMedia">
+            <span class="achievementBadge">{{ item.category }}</span>
+            <span class="achievementIconWrap">
+              @if (item.badgeImageSrc) {
+                <img
+                  class="achievementBadgeImage"
+                  [ngSrc]="item.badgeImageSrc"
+                  [alt]="item.badgeImageAlt || item.organization"
+                  width="200"
+                  height="200"
+                />
+              } @else {
+                <icon [name]="item.icon" [size]="72" />
+              }
+            </span>
+          </div>
 
-        <h2 class="achievementOrg">{{ item.organization }}</h2>
-        <p class="achievementDesc">{{ item.description }}</p>
-        <p class="achievementCategory">{{ item.category }}</p>
-      </article>
+          <div class="achievementContent">
+            <div class="achievementTopRow">
+              <p class="achievementYear">{{ item.year }}</p>
+            </div>
+
+            <h2 class="achievementOrg">{{ item.organization }}</h2>
+            <p class="achievementDesc">{{ item.description }}</p>
+          </div>
+        </a>
+      } @else {
+        <article class="achievementCard">
+          <div class="achievementMedia">
+            <span class="achievementBadge">{{ item.category }}</span>
+            <span class="achievementIconWrap">
+              @if (item.badgeImageSrc) {
+                <img
+                  class="achievementBadgeImage"
+                  [ngSrc]="item.badgeImageSrc"
+                  [alt]="item.badgeImageAlt || item.organization"
+                  width="200"
+                  height="200"
+                />
+              } @else {
+                <icon [name]="item.icon" [size]="72" />
+              }
+            </span>
+          </div>
+
+          <div class="achievementContent">
+            <div class="achievementTopRow">
+              <p class="achievementYear">{{ item.year }}</p>
+            </div>
+
+            <h2 class="achievementOrg">{{ item.organization }}</h2>
+            <p class="achievementDesc">{{ item.description }}</p>
+          </div>
+        </article>
+      }
     }
   </div>
 </section>

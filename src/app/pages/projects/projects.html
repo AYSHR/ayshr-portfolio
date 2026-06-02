@@ -18,30 +18,47 @@
 
   <div class="projectsGrid">
     @for (project of filteredProjects(); track project.title) {
-      <article class="projectCard">
-        <div class="projectVisual">
-          <span class="projectBadge">{{ project.category }}</span>
-          <span class="projectIconWrap">
-            <icon [name]="project.icon" [size]="22" />
-          </span>
-        </div>
-
-        <div class="projectContent">
-          @if (project.link) {
-            <a [href]="project.link" target="_blank" rel="noopener noreferrer" class="projectTitle projectTitleLink">{{ project.title }}</a>
-          } @else {
-            <h2 class="projectTitle">{{ project.title }}</h2>
-          }
-          <p class="projectDescription">{{ project.description }}</p>
-          <p class="projectLink">Read more</p>
-
-          <div class="projectTags">
-            @for (tag of project.tags; track tag) {
-              <span class="projectTag">{{ tag }}</span>
-            }
+      @if (project.link) {
+        <a [href]="project.link" target="_blank" rel="noopener noreferrer" class="projectCard projectCardLink">
+          <div class="projectVisual">
+            <span class="projectBadge">{{ project.category }}</span>
+            <span class="projectIconWrap">
+              <icon [name]="project.icon" [size]="22" />
+            </span>
           </div>
-        </div>
-      </article>
+
+          <div class="projectContent">
+            <h2 class="projectTitle">{{ project.title }}</h2>
+            <p class="projectDescription">{{ project.description }}</p>
+
+            <div class="projectTags">
+              @for (tag of project.tags; track tag) {
+                <span class="projectTag">{{ tag }}</span>
+              }
+            </div>
+          </div>
+        </a>
+      } @else {
+        <article class="projectCard">
+          <div class="projectVisual">
+            <span class="projectBadge">{{ project.category }}</span>
+            <span class="projectIconWrap">
+              <icon [name]="project.icon" [size]="22" />
+            </span>
+          </div>
+
+          <div class="projectContent">
+            <h2 class="projectTitle">{{ project.title }}</h2>
+            <p class="projectDescription">{{ project.description }}</p>
+
+            <div class="projectTags">
+              @for (tag of project.tags; track tag) {
+                <span class="projectTag">{{ tag }}</span>
+              }
+            </div>
+          </div>
+        </article>
+      }
     }
   </div>
 </section>

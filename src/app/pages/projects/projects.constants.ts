@@ -52,6 +52,15 @@ export const PROJECTS: ProjectItem[] = [
     category: 'Project',
     tags: ['Angular', 'Typescript', 'SCSS', 'Node.js', 'PWA', 'SPA', 'Authentication', 'Mapbox'],
     icon: 'star',
+  },
+  {
+    title: 'GEO: Generative Engine Optimization',
+    link: 'https://medium.com/@AYSHR_M/from-google-search-to-ai-answers-the-growing-importance-of-geo-25d352e12065',
+    description:
+      'An article discussing the increasing significance of Generative Engine Optimization (GEO) in the evolving landscape of search and AI-driven content discovery.',
+    category: 'Article',
+    tags: ['Angular', 'GEO', 'SEO', 'AI search', 'Content optimization', 'Digital Marketing'],
+    icon: 'star',
   }
 ];
 

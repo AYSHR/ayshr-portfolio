@@ -66,7 +66,25 @@
 .projectCard {
   border: 1px solid $projects-card-border;
   border-radius: 1rem;
+  display: block;
   overflow: hidden;
+}
+
+.projectCardLink {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    border-color: $projects-accent;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
+  }
 }
 
 .projectVisual {
@@ -120,33 +138,11 @@
   margin: 0;
 }
 
-.projectTitleLink {
-  cursor: pointer;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.projectTitleLink:hover {
-  color: $projects-accent;
-}
-
 .projectDescription {
   color: $projects-text;
   font-size: 1.05rem;
   line-height: 1.6;
   margin: 0;
-}
-
-.projectLink {
-  color: $projects-accent;
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin: 0;
-  text-decoration: none;
-}
-
-.projectLinkDisabled {
-  opacity: 0.35;
 }
 
 .projectTags {
